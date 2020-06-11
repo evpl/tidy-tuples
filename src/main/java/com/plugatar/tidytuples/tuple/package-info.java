@@ -17,6 +17,6 @@
  */
 
 /**
- * Simple immutable serializable implementations of tuple.
+ * Simple immutable implementations of the tuple.
  */
-package com.plugatar.tidytuples.ttuple;
+package com.plugatar.tidytuples.tuple;

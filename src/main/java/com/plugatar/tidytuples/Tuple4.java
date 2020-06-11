@@ -25,7 +25,7 @@ package com.plugatar.tidytuples;
  * @param <T2> the type of the 2nd item
  * @param <T3> the type of the 3rd item
  */
-public interface Tuple4<T0, T1, T2, T3> extends Tuple {
+public interface Tuple4<T0, T1, T2, T3> extends AnyTuple {
 
     /**
      * Returns the 0th item.

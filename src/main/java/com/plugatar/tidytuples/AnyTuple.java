@@ -17,34 +17,17 @@
  */
 package com.plugatar.tidytuples;
 
-public interface Tuple<T> extends AnyTuple, Iterable<T> {
+/**
+ * Representation of the tuple concept.
+ */
+public interface AnyTuple {
 
-    @Override
-    T[] asArray();
+    int length();
 
-    T i(int idx);
-
-    Tuple<T> inner(int leftBoundIdx, int rightBoundIdx);
-
-    Tuple<T> outer(int leftBoundIdx, int rightBoundIdx);
-
-    Tuple<T> with(int idx, T... anotherItems);
-
-    Tuple<T> withLast(T... lastItems);
-
-    void supplyTo(Consumer<? super T> consumer);
-
-    <R> R applyTo(Function<? super T, ? extends R> function);
-
-    @FunctionalInterface
-    interface Consumer<T> {
-
-        void accept(T[] items);
-    }
-
-    @FunctionalInterface
-    interface Function<T, R> {
-
-        R apply(T[] items);
-    }
+    /**
+     * Collect this tuple items to the ordered by index nearest possible type array.
+     *
+     * @return the ordered array of this tuple items
+     */
+    Object[] asArray();
 }

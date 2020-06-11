@@ -22,7 +22,7 @@ package com.plugatar.tidytuples;
  *
  * @param <T0> the type of the 0th item
  */
-public interface Tuple1<T0> extends Tuple {
+public interface Tuple1<T0> extends AnyTuple, Iterable<Object> {
 
     /**
      * Returns the 0th item.

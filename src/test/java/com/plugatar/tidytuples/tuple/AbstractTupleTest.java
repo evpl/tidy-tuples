@@ -15,36 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.plugatar.tidytuples;
+package com.plugatar.tidytuples.tuple;
 
-public interface Tuple<T> extends AnyTuple, Iterable<T> {
+/**
+ * Test cases for the final {@link AbstractTuple} methods.
+ */
+final class AbstractTupleTest {
 
-    @Override
-    T[] asArray();
-
-    T i(int idx);
-
-    Tuple<T> inner(int leftBoundIdx, int rightBoundIdx);
-
-    Tuple<T> outer(int leftBoundIdx, int rightBoundIdx);
-
-    Tuple<T> with(int idx, T... anotherItems);
-
-    Tuple<T> withLast(T... lastItems);
-
-    void supplyTo(Consumer<? super T> consumer);
-
-    <R> R applyTo(Function<? super T, ? extends R> function);
-
-    @FunctionalInterface
-    interface Consumer<T> {
-
-        void accept(T[] items);
-    }
-
-    @FunctionalInterface
-    interface Function<T, R> {
-
-        R apply(T[] items);
-    }
 }

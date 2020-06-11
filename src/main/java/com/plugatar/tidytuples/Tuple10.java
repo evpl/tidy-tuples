@@ -31,7 +31,7 @@ package com.plugatar.tidytuples;
  * @param <T8> the type of the 8th item
  * @param <T9> the type of the 9th item
  */
-public interface Tuple10<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9> extends Tuple {
+public interface Tuple10<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9> extends AnyTuple {
 
     /**
      * Returns the 0th item.

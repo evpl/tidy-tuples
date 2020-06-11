@@ -15,11 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.plugatar.tidytuples.ttuple;
+package com.plugatar.tidytuples.tuple;
 
 import com.plugatar.tidytuples.Tuple2;
-
-import java.io.Serializable;
 
 /**
  * Simple immutable implementation of the {@link Tuple2}.
@@ -27,8 +25,7 @@ import java.io.Serializable;
  * @param <T0> the type of the 0th item
  * @param <T1> the type of the 1st item
  */
-public final class TTuple2<T0, T1> extends TTuple implements Tuple2<T0, T1>, Serializable {
-    private static final long serialVersionUID = 1L;
+public final class TupleOf2<T0, T1> extends AbstractTuple<Object> implements Tuple2<T0, T1> {
     private final T0 i0;
     private final T1 i1;
 
@@ -38,14 +35,10 @@ public final class TTuple2<T0, T1> extends TTuple implements Tuple2<T0, T1>, Ser
      * @param i0 the 0th item
      * @param i1 the 1st item
      */
-    public TTuple2(final T0 i0, final T1 i1) {
+    public TupleOf2(final T0 i0, final T1 i1) {
+        super(new Object[]{i0, i1});
         this.i0 = i0;
         this.i1 = i1;
-    }
-
-    @Override
-    public Object[] asArray() {
-        return new Object[]{i0, i1};
     }
 
     @Override
