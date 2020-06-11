@@ -34,5 +34,8 @@ public class Example {
 
         // 4
         boolean equals = tupleOfNumbers.equals(tuple3); // true
+
+        // 5
+        Tuple<Number> newTupleOfNumbers = tupleOfNumbers.withLast(4L, 5L, 6, 7.5); // new instance
     }
 }
